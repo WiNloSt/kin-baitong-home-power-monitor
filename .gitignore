@@ -1,0 +1,7 @@
+node_modules
+
+# All logs
+functions/*.log
+
+# Because I use yarn
+package-lock.json

@@ -1,0 +1,12 @@
+{
+  "name": "kin-baitong-home-power-monitor",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mahatthana Nomsawadi <mahatthana.n@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "firebase-tools": "^9.16.0"
+  }
+}
