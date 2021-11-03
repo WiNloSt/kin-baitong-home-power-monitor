@@ -51,7 +51,9 @@ async function readLastRowValue(spreadsheetId: string) {
         spreadsheetId,
         range: 'Monitor data!A:A',
         valueInputOption: 'RAW',
-        requestBody: { values: [['']] },
+        requestBody: {
+          values: [[null]],
+        },
       })
       // @tsignore
       .then((response) => {
