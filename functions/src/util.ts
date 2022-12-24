@@ -37,7 +37,7 @@ export async function updatePowerMeter(spreadsheetId: string, meterDeviceId: str
 async function fetchPowerMeterData(meterDeviceId: string, startDate = '2021-07-01T00:00:00+07:00') {
   const endDate = dayjs().tz('Asia/Bangkok').format()
 
-  const url = `http://space-ui.momoinfinitech.com/sql_line_chart_data.php?select_device_id=${meterDeviceId}&view_mode=MINUTE&txt_tags=data01,data02,data03,data04,data05,data06,data07,data08&start_date=${startDate}&end_date=${endDate}&db_separate=true&select_device_type=ENERGY`
+  const url = `https://space-ui.momospace.net/sql_line_chart_data.php?select_device_id=${meterDeviceId}&view_mode=MINUTE&txt_tags=data01,data02,data03,data04,data05,data06,data07,data08&start_date=${startDate}&end_date=${endDate}&db_separate=true&select_device_type=ENERGY`
   return axios.get(url).then((response) => {
     return JSON.parse(response.data.substring(0, response.data.indexOf(']') + 1))
   })
